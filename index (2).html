@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMINA — Architecture & Interior Design Studio</title>
+<meta name="description" content="LUMINA Architects. We design spaces that command silence. Award-winning architectural and interior design studio.">
+<meta property="og:title" content="LUMINA — Architecture & Interior Design Studio">
+<meta property="og:description" content="We design spaces that command silence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"><span id="cursorLabel"></span></div>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="nav" id="nav">
+  <a href="#" class="nav-logo">LUMINA</a>
+  <nav class="nav-links">
+    <a href="#philosophy" data-cursor>Studio</a>
+    <a href="#projects" data-cursor>Projects</a>
+    <a href="#contact" data-cursor>Contact</a>
+  </nav>
+  <button class="nav-menu-btn" id="menuBtn" data-cursor aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-img-wrap">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80&fit=crop" alt="Luxury modern architecture">
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">
+          <span class="title-line"><span class="title-word">LUMINA</span></span>
+        </h1>
+      </div>
+      <div class="hero-subtitle-wrap">
+        <p class="hero-subtitle">
+          <span class="subtitle-line"><span class="subtitle-word">Architecture & Interior Design Studio</span></span>
+        </p>
+      </div>
+      <div class="hero-meta">
+        <span class="meta-item">Est. 2018</span>
+        <span class="meta-divider"></span>
+        <span class="meta-item">Cape Town — Milan</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== PHILOSOPHY ===== -->
+  <section class="philosophy" id="philosophy">
+    <div class="philosophy-inner">
+      <div class="philosophy-text">
+        <span class="section-label">STUDIO PHILOSOPHY</span>
+        <h2 class="philosophy-heading">
+          <span class="line"><span class="word">We design spaces</span></span>
+          <span class="line"><span class="word">that command</span></span>
+          <span class="line"><span class="word">silence.</span></span>
+        </h2>
+        <p class="philosophy-body">Every project begins with restraint. We strip away the unnecessary until only intention remains — architecture that breathes, interiors that speak through material and light, not decoration.</p>
+        <p class="philosophy-body">Awarded 14 international design honours since 2019. Featured in Dezeen, ArchDaily, and Wallpaper*.</p>
+        <div class="philosophy-stats">
+          <div class="stat"><span class="stat-num" data-count="47">0</span><span class="stat-label">Projects Completed</span></div>
+          <div class="stat"><span class="stat-num" data-count="14">0</span><span class="stat-label">Design Awards</span></div>
+          <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Countries</span></div>
+        </div>
+      </div>
+      <div class="philosophy-images">
+        <div class="phi-img phi-img--a" data-speed="0.85">
+          <div class="img-reveal">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&fit=crop" alt="Modern villa exterior" loading="lazy">
+          </div>
+        </div>
+        <div class="phi-img phi-img--b" data-speed="1.15">
+          <div class="img-reveal">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=80&fit=crop" alt="Interior living space" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORIZONTAL GALLERY (pinned) ===== -->
+  <section class="gallery-section" id="projects">
+    <div class="gallery-header">
+      <span class="section-label">SELECTED WORK</span>
+      <h2 class="gallery-heading">
+        <span class="line"><span class="word">Featured Projects</span></span>
+      </h2>
+    </div>
+    <div class="gallery-pin-wrapper">
+      <div class="gallery-track" id="galleryTrack">
+
+        <article class="project-card" data-cursor-label="VIEW">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80&fit=crop" alt="The Obsidian House" loading="lazy">
+          </div>
+          <div class="project-info">
+            <span class="project-tag">RESIDENTIAL — 2024</span>
+            <h3 class="project-name">The Obsidian House</h3>
+            <p class="project-location">Clifton, Cape Town</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-cursor-label="VIEW">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80&fit=crop" alt="Oasis Penthouse" loading="lazy">
+          </div>
+          <div class="project-info">
+            <span class="project-tag">PENTHOUSE — 2023</span>
+            <h3 class="project-name">Oasis Penthouse</h3>
+            <p class="project-location">V&A Waterfront, Cape Town</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-cursor-label="VIEW">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80&fit=crop" alt="Villa Sereno" loading="lazy">
+          </div>
+          <div class="project-info">
+            <span class="project-tag">VILLA — 2024</span>
+            <h3 class="project-name">Villa Sereno</h3>
+            <p class="project-location">Lake Como, Italy</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-cursor-label="VIEW">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=80&fit=crop" alt="The Glass Pavilion" loading="lazy">
+          </div>
+          <div class="project-info">
+            <span class="project-tag">COMMERCIAL — 2023</span>
+            <h3 class="project-name">The Glass Pavilion</h3>
+            <p class="project-location">Franschhoek, Western Cape</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services">
+    <div class="services-inner">
+      <span class="section-label">CAPABILITIES</span>
+      <div class="services-grid">
+        <div class="service-item">
+          <span class="service-num">01</span>
+          <h3>Architecture</h3>
+          <p>Residential and commercial structures designed from first principle — climate, context, and the way light moves through a room.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-num">02</span>
+          <h3>Interior Design</h3>
+          <p>Material palettes, bespoke furniture, and spatial choreography. Every surface, texture, and joint is specified by us.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-num">03</span>
+          <h3>Landscape</h3>
+          <p>Architecture doesn't end at the threshold. We design the ground plane, water features, and planting schemes as one integrated composition.</p>
+        </div>
+        <div class="service-item">
+          <span class="service-num">04</span>
+          <h3>Project Management</h3>
+          <p>Full oversight from sketch to handover. We manage contractors, budgets, and timelines so the design intent survives construction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AWARDS TICKER ===== -->
+  <div class="awards-ticker">
+    <div class="awards-track">
+      <span>DEZEEN AWARDS 2023 ✦</span><span>WALLPAPER* DESIGN AWARDS ✦</span><span>ARCHDAILY BEST RESIDENTIAL ✦</span><span>SA INSTITUTE OF ARCHITECTS ✦</span>
+      <span>DEZEEN AWARDS 2023 ✦</span><span>WALLPAPER* DESIGN AWARDS ✦</span><span>ARCHDAY BEST RESIDENTIAL ✦</span><span>SA INSTITUTE OF ARCHITECTS ✦</span>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contact">
+  <div class="footer-cta">
+    <span class="section-label">NEXT STEP</span>
+    <h2 class="footer-title" id="footerTitle" data-cursor-label="LET'S TALK">
+      <span class="line"><span class="word">START A</span></span>
+      <span class="line"><span class="word">PROJECT</span></span>
+    </h2>
+    <a href="mailto:studio@lumina-architects.com" class="footer-email" data-cursor>studio@lumina-architects.com</a>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 LUMINA Architects. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#" data-cursor>Instagram</a>
+      <a href="#" data-cursor>LinkedIn</a>
+      <a href="#" data-cursor>Behance</a>
+    </div>
+    <p class="footer-location">Cape Town — Milan</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
