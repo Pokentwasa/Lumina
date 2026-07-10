@@ -215,6 +215,68 @@
       scrollTrigger: { trigger: '.services-grid', start: 'top 85%' }
     });
 
+    // ---------- GENERIC FADE-UP (works on all pages) ----------
+    document.querySelectorAll('.fade-up').forEach((el) => {
+      gsap.to(el, {
+        opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' }
+      });
+    });
+
+    // ---------- GENERIC WORD REVEALS (all pages) ----------
+    document.querySelectorAll('.line .word').forEach((w) => {
+      // Skip hero words (handled separately with delays)
+      if (w.closest('.hero-title') || w.closest('.hero-subtitle') || w.closest('.about-hero-title')) return;
+      if (w.closest('.philosophy-heading') && document.querySelector('.philosophy')) return; // handled above
+      gsap.to(w, {
+        y: '0%', duration: 1.2, ease: 'power4.out',
+        scrollTrigger: { trigger: w.closest('.line'), start: 'top 88%' }
+      });
+    });
+
+    // ---------- ABOUT PAGE HERO ----------
+    if (document.querySelector('.about-hero-title')) {
+      document.querySelectorAll('.about-hero-title .word').forEach((w, i) => {
+        gsap.to(w, { y: '0%', duration: 1.4, delay: 0.3 + i * 0.15, ease: 'power4.out' });
+      });
+
+      gsap.from('.about-hero-meta', { opacity: 0, y: 15, duration: 0.8, delay: 0.9, ease: 'power2.out' });
+
+      // Portraits entrance
+      gsap.from('.portrait--a', { opacity: 0, y: 60, duration: 1, delay: 0.6, ease: 'power3.out' });
+      gsap.from('.portrait--b', { opacity: 0, y: 40, duration: 1, delay: 0.8, ease: 'power3.out' });
+
+      // Ken Burns on about hero
+      gsap.to('.about-hero-img-wrap img', {
+        scale: 1.0, ease: 'none',
+        scrollTrigger: { trigger: '.about-hero', start: 'top top', end: 'bottom top', scrub: 1.5 }
+      });
+    }
+
+    // ---------- ABOUT REASONS IMAGE ----------
+    if (document.querySelector('.reasons-image img')) {
+      gsap.to('.reasons-image img', {
+        scale: 1.0, ease: 'none',
+        scrollTrigger: { trigger: '.reasons-image', start: 'top bottom', end: 'bottom top', scrub: 2 }
+      });
+    }
+
+    // ---------- TEAM CARDS ----------
+    if (document.querySelector('.team-grid')) {
+      gsap.from('.team-card', {
+        opacity: 0, y: 50, duration: 0.7, stagger: 0.1, ease: 'power2.out',
+        scrollTrigger: { trigger: '.team-grid', start: 'top 85%' }
+      });
+    }
+
+    // ---------- AWARD ITEMS ----------
+    if (document.querySelector('.awards-list')) {
+      gsap.from('.award-item', {
+        opacity: 0, y: 30, duration: 0.5, stagger: 0.06, ease: 'power2.out',
+        scrollTrigger: { trigger: '.awards-list', start: 'top 85%' }
+      });
+    }
+
     // ---------- FOOTER ----------
     document.querySelectorAll('.footer-title .word').forEach((w) => {
       gsap.to(w, {
