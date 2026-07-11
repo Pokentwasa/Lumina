@@ -1,0 +1,106 @@
+/* ============================================
+   LUMINA — CASE STUDY SHARED STYLES
+   ============================================ */
+
+/* Back button in nav */
+.cs-back {
+  font-family: var(--font-body); font-weight: 400;
+  font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-dim); transition: color 0.3s;
+}
+.cs-back:hover { color: var(--pearl); }
+
+/* ===== HERO ===== */
+.cs-hero {
+  position: relative; height: 100vh; width: 100%;
+  display: flex; align-items: flex-end; overflow: hidden;
+}
+.cs-hero-img { position: absolute; inset: 0; }
+.cs-hero-img img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); }
+.cs-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(9,9,9,0.2) 0%, rgba(9,9,9,0.5) 60%, rgba(9,9,9,0.92) 100%);
+}
+.cs-hero-content { position: relative; z-index: 1; padding: 0 64px 80px; width: 100%; }
+.cs-hero-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(48px, 8vw, 120px); line-height: 0.95;
+  letter-spacing: 0.03em; color: var(--pearl);
+}
+
+/* ===== INTRO ===== */
+.cs-intro { padding: 120px 64px; border-bottom: 1px solid var(--border); }
+.cs-intro-inner { display: grid; grid-template-columns: 280px 1fr; gap: 80px; max-width: 1300px; margin: 0 auto; align-items: start; }
+.cs-meta { display: flex; flex-direction: column; gap: 28px; padding-top: 8px; }
+.cs-meta-item { display: flex; flex-direction: column; gap: 4px; }
+.cs-meta-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.cs-meta-item span:last-child { font-size: 14px; color: var(--text-dim); }
+.cs-section-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(28px, 3.5vw, 44px); line-height: 1.2;
+  letter-spacing: 0.02em; margin-bottom: 32px;
+}
+.cs-body { font-size: 16px; line-height: 1.85; color: var(--text-body); margin-bottom: 20px; }
+
+/* ===== FULL-WIDTH IMAGE ===== */
+.cs-full-img { width: 100%; aspect-ratio: 21/9; overflow: hidden; }
+.cs-full-img .parallax-img { width: 100%; height: 100%; }
+.cs-full-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== DETAIL SECTION ===== */
+.cs-detail { padding: 120px 64px; border-bottom: 1px solid var(--border); }
+.cs-detail-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1300px; margin: 0 auto; align-items: center; }
+.cs-detail-img .img-frame { overflow: hidden; }
+.cs-detail-img img { width: 100%; height: auto; }
+
+/* ===== SPECS GRID ===== */
+.cs-specs { padding: 120px 64px; border-bottom: 1px solid var(--border); }
+.cs-specs-inner { max-width: 1300px; margin: 0 auto; }
+.cs-specs-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); margin-top: 48px;
+}
+.cs-spec { background: var(--bg); padding: 40px 32px; transition: background 0.3s; }
+.cs-spec:hover { background: var(--bg-raised); }
+.cs-spec h4 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 16px; letter-spacing: 0.04em; margin-bottom: 10px;
+}
+.cs-spec p { font-size: 14px; line-height: 1.7; color: var(--text-dim); }
+
+/* ===== NEXT PROJECT ===== */
+.cs-next { border-top: 1px solid var(--border); }
+.cs-next-link {
+  display: block; position: relative; overflow: hidden;
+  height: 50vh; cursor: none;
+}
+.cs-next-link img {
+  width: 100%; height: 100%; object-fit: cover;
+  transform: scale(1.08); filter: brightness(0.35);
+  transition: transform 0.8s var(--ease), filter 0.5s;
+}
+.cs-next-link:hover img { transform: scale(1.0); filter: brightness(0.5); }
+.cs-next-link .section-label {
+  position: absolute; top: 40px; left: 64px; z-index: 1;
+}
+.cs-next-title {
+  position: absolute; bottom: 48px; left: 64px; z-index: 1;
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(32px, 5vw, 64px); line-height: 1.1;
+  letter-spacing: 0.03em; color: var(--pearl);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .cs-intro-inner { grid-template-columns: 1fr; gap: 48px; }
+  .cs-detail-inner { grid-template-columns: 1fr; gap: 48px; }
+  .cs-specs-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  .cs-hero-content { padding: 0 24px 60px; }
+  .cs-intro, .cs-detail, .cs-specs { padding-left: 24px; padding-right: 24px; }
+  .cs-specs-grid { grid-template-columns: 1fr; }
+  .cs-next-link .section-label { left: 24px; }
+  .cs-next-title { left: 24px; bottom: 32px; }
+}
